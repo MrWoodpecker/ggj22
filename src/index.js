@@ -11,13 +11,10 @@ import Room1 from './Scenes/Game/Room1';
 
 
 new Phaser.Game(Object.assign(config, {
-    scene: {
-        create: () =>{
-            console.log('created');
-        },
+    scene: [
         SplashScreenPhaser, 
         SplashScreenGGJ, 
         Menu, 
         Room1
-    },
+    ],
 }));
