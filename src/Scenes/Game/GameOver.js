@@ -18,11 +18,11 @@ class GameOver extends Phaser.Scene {
     create() {
         const { width, height } = this.sys.game.canvas;
 
-        this.add.text(width / 2, height / 2, 'Game Over', { fill: 'white', fontFamily: 'GameFont', fontSize: '100px' }).setOrigin(0.5, 0.5);
+        this.add.text(width / 2, height / 2, 'Zeit abgelaufen', { fill: 'white', fontFamily: 'GameFont', fontSize: '100px' }).setOrigin(0.5, 0.5);
         
         this.buttons = {
             restart: new Button({ scene: this, x: width / 2, y: (height / 2) + 150 }, 'Spiel erneut starten', true),
-            menu: new Button({ scene: this, x: width / 2, y: (height / 2) + 220 }, 'Zurück zum Menü'),
+            menu: new Button({ scene: this, x: width / 2, y: (height / 2) + 220 }, 'Zurueck zum Menue'),
         };
         this.activeButton = 'restart';
 

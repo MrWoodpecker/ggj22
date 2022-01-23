@@ -16,4 +16,8 @@ export default {
 
     // custom stuff
     splashScreenDelay: 100,
+
+    // state
+    plantsStatus: 'NONE', // NONE | FAIL | DONE
+    computerStatus: 'NONE', // NONE | FAIL | DONE
 };

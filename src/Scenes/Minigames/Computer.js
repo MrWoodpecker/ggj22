@@ -1,5 +1,5 @@
 // GGJ 2022
-// Computer.js
+// Computer.jscc
 // Mini Game Computer
 import Phaser from 'phaser';
 
@@ -12,19 +12,24 @@ class Computer extends Phaser.Scene {
     }
 
     preload() {
-
+        this.load.image('bg_computer', 'assets/img/Computerscreen.png');
     }
 
     create() {
         const { width, height } = this.sys.game.canvas;
 
-        this.bg = this.add.rectangle(50, 50, width - 250, height - 100, 0);
-        this.bg.setOrigin(0, 0);
-        this.text_welcome = this.add.text(100, 100, 'Anmelden', { fontFamily: 'GameFont', fontSize: '50px' });
-        this.text_input = this.add.text(100, 300, 'Sicherheitscode: ', { fontFamily: 'GameFont', fontSize: '30px' });
-        this.text_code = this.add.text(400, 300, '', { fontFamily: 'GameFont', fontSize: '35px' });
-        this.text_hint = this.add.text(100, 400, 'XXF567AAFE77990FD', { fontFamily: 'GameFont', fontSize: '35px' });
+        this.bg = this.add.rectangle(width / 2, height / 2, width - 320, height - 100, 0);
+        this.bg.setOrigin(0.5, 0.5);
+        this.bg_image = this.add.image(this.bg.getTopLeft().x, this.bg.getTopLeft().y, 'bg_computer');
+        this.bg_image.setOrigin(0, 0);
+        this.bg_image.setScale(0.9);
+        this.text_welcome = this.add.text(500, 247, 'Anmelden', { fill: 'black', fontFamily: 'GameFont', fontSize: '25px' });
+        this.text_input = this.add.text(500, 450, 'Sicherheitscode: ', { fill: 'black', fontFamily: 'GameFont', fontSize: '30px' });
+        this.text_code = this.add.text(800, 450, '', { fill: 'black', fontFamily: 'GameFont', fontSize: '35px' });
+        this.text_hint = this.add.text(500, 550, '', { fill: 'black', fontFamily: 'GameFont', fontSize: '35px' });
         this.text_hint.setVisible(false);
+        this.text_codeCorrectIncorrect = this.add.text(500, 650, '', { fill: '#126782', fontFamily: 'GameFont', fontSize: '35px' });
+        this.text_codeCorrectIncorrect.setVisible(false);
 
         this.code = '';
 
@@ -116,10 +121,39 @@ class Computer extends Phaser.Scene {
 
         this.text_code.setText(this.code);
 
-        if(this.code.length === 8) { 
-            this.text_hint.setVisible(true);
-        } else {
+        if(this.code.length === 0) {
             this.text_hint.setVisible(false);
+        }
+
+        if(this.code.length === 4) {
+            if(this.code === '6   ') {
+                this.text_hint.setText('KUH KU OK K OKAY KK HUH UH');
+            }
+            if(this.code !== '6   ') {
+                this.text_hint.setText('Q Q UHU U K FERTIG LINKS WEITER');
+            }
+            this.text_hint.setVisible(true);
+        }
+
+        if(this.code.length === 8) {
+            this.text_codeCorrectIncorrect.setVisible(true);
+            if(this.code === '6   2   ') {
+                this.text_codeCorrectIncorrect.setStyle({ fill: '#126782' });
+                this.text_codeCorrectIncorrect.setText('Sicherheitscode korrekt!');
+                localStorage.setItem('computerStatus', 'DONE');
+            }
+            if(this.code !== '6   2   ') {
+                this.text_codeCorrectIncorrect.setStyle({ fill: '#653b47' });
+                this.text_codeCorrectIncorrect.setText('Sicherheitscode nicht korrekt!');
+                this.code = '';
+                this.time.addEvent({
+                    delay: 1500,
+                    callback: () => { this.text_codeCorrectIncorrect.setVisible(false) },
+                    callbackScope: this,
+                    loop: false
+                });
+                localStorage.setItem('computerStatus', 'FAIL');
+            }
         }
 
         if(this.key_ESC.isDown) {

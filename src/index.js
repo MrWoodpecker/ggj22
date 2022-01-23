@@ -18,5 +18,5 @@ new Phaser.Game(Object.assign(config, {
         Menu, 
         Room1,
         GameOver
-    ],
+    ]
 }));

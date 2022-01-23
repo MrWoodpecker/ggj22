@@ -22,7 +22,7 @@ class Menu extends Phaser.Scene {
         this.music = this.sound.add('bg_music');
         this.music.play();
 
-        this.add.text(width / 2, height / 3, 'Name', { fill: 'white', fontFamily: 'GameFont', fontSize: '40px' }).setOrigin(0.5, 0.5);
+        this.add.text(width / 2, height / 3, 'Stressed Out', { fill: 'white', fontFamily: 'GameFont', fontSize: '100px' }).setOrigin(0.5, 0.5);
 
         this.buttons = {
             start: new Button({ scene: this, x: width / 2, y: height / 2 }, 'Spiel starten', true),
