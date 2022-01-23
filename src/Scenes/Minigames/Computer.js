@@ -118,6 +118,8 @@ class Computer extends Phaser.Scene {
 
         if(this.code.length === 8) { 
             this.text_hint.setVisible(true);
+        } else {
+            this.text_hint.setVisible(false);
         }
 
         if(this.key_ESC.isDown) {

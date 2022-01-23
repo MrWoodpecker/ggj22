@@ -7,6 +7,7 @@ import SplashScreenPhaser from './Scenes/SplashScreens/Phaser';
 import SplashScreenGGJ from './Scenes/SplashScreens/GGJ';
 import Menu from './Scenes/Menu/Menu';
 import Room1 from './Scenes/Game/Room1';
+import GameOver from './Scenes/Game/GameOver';
 
 
 
@@ -15,6 +16,7 @@ new Phaser.Game(Object.assign(config, {
         SplashScreenPhaser, 
         SplashScreenGGJ, 
         Menu, 
-        Room1
+        Room1,
+        GameOver
     ],
 }));

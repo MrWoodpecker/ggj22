@@ -3,6 +3,7 @@
 // Main Menu
 import Phaser from 'phaser';
 import Button from '../../Components/Core/Button';
+import Licenses from '../Minigames/Licenses';
 import Settings from '../Minigames/Setting';
 
 
@@ -55,13 +56,20 @@ class Menu extends Phaser.Scene {
                 this.scene.start("Room1");
             }
             if(this.buttons.manual.getActive()){
-                this.scene.start("SplashScreenGGJ");
+                window.location.href = 'http://localhost:8080/manual'
             }
             if(this.buttons.settings.getActive()){
                 if(this.scene.get('Settings') === null) {
                     this.scene.add('Settings', Settings, true);
                 } else {
                     this.scene.get('Settings').scene.setVisible(true);
+                }
+            }
+            if(this.buttons.licenses.getActive()) {
+                if(this.scene.get('Licenses') === null) {
+                    this.scene.add('Licenses', Licenses, true);
+                } else {
+                    this.scene.get('Licenses').scene.setVisible(true);
                 }
             }
             this.key_ENTER_isPressed = true;

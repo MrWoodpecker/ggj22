@@ -62,8 +62,8 @@ class Room1 extends Phaser.Scene {
         this.showComputerScene = false;
         // <<< Computer
         // >>> Timer
-        this.timeInSeconds = 300;
-        this.timeText = this.add.text(1470, 160, "0:00", { fontFamily: 'GameFont', fontSize: '50px', color: 'red' });
+        this.timeInSeconds = 3;
+        this.timeText = this.add.text(1470, 160, "0:00", { fontFamily: 'GameFont', fontSize: '50px', color: '#8ecae6' });
         this.timeText.setOrigin(0.5, 0.5);
         this.timer = this.time.addEvent({
             delay: 1000,
@@ -88,8 +88,8 @@ class Room1 extends Phaser.Scene {
         var timeString = this.addZeros(minutes) + ":" + this.addZeros(seconds);
         this.timeText.text = timeString;
         if (this.timeInSeconds == 0) {
-            game.time.events.remove(this.timer);
-            this.timeText.text="Game Over";
+            this.time.removeAllEvents();
+            this.scene.start('GameOver');
         }
     }
 
