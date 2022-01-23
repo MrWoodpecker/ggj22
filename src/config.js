@@ -11,10 +11,9 @@ export default {
     scale: {
         width: '100vw',
         height: '100vh',
-        mode: Phaser.Scale.SCALE,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
+        mode: Phaser.Scale.NO_CENTER,
     },
 
     // custom stuff
-    splashScreenDelay: 1300,
+    splashScreenDelay: 100,
 };

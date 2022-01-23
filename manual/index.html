@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Global Game Jam 2022 - Anleitung</title>
+        <style>
+            table,
+            th,
+            td {
+              padding: 10px;
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            td.noBorder {
+                border: none;
+                border-collapse: separate;
+            }
+            table {
+                margin-bottom: 10px;
+            }
+          </style>
+    </head>
+    <div>
+        <h1>Global Game Jam 2022</h1>
+        <h2>Anleitung</h2>
+        <h3>Aufbau des Spiels</h3>
+        <p>
+            Jedes Mal, wenn ihr ein Spiel startet, werdet ihr einen etwas
+            anderen Raum sehen. Er wird sich in vielen kleinen Details 
+            unterscheiden.<br>
+            Es gibt immer ein zentrales Element, die digitale Uhr, 
+            die euch die verbleibende Zeit für diese Runde anzeigt. Sollte die Uhr
+            "00:00" anzeigen, bevor ihr alle Rätsel des Raums gelöst habt, 
+            habt ihr verloren.<br>
+            TODO: Anzeige der Versuche (nach zwei Fehlversuchen verloren)
+        </p>
+        <h3>Wie könnt ihr gewinnen?</h3>
+        <p>
+            Wenn ihr alle Rätsel des Raums in der vorgegebenen Zeit gelöst habt
+            und dabei nicht mehr als einen Fehler gemacht habt.
+        </p>
+        <h3>Bevor ihr startet</h3>
+        <p>
+            Bei diesem Spiel handlet es sich um ein Zwei-Spieler-Spiel. Ihr benötigt
+            zwei verschiedene Geräte mit denen ihr spielt. Ihr dürft
+            euch zwar im selben Raum aufhalten, dürft aber <strong>nicht</strong>
+            den Bildschirm des jeweils anderen Geräts sehen.
+        </p>
+        <p>
+            Eine Person startet das Spiel, die andere Person öffnet diese Anleitung.
+            Ab jetzt heißt es: reden, reden, reden. Denn nur, wenn die Person, die
+            den Raum sieht genau beschreibt, was sie sieht, kann die Person mit
+            der Anleitung Anweisungen geben, was zutun ist.<br>
+            Ihr könnt nur gemeinsam gewinnen.
+        </p>
+        <p>
+            Hinweis: Die Person, die mit der Anleitung arbeitet, sollte sie 
+            kurz überfliegen, um grob zu wissen, was drin steht.<br>
+            Die Person, die den Raum sieht sollte sich die Anleitung erstmal
+            nicht weiterlesen.
+        </p>
+
+        <hr>
+
+        <h3>Übersicht im Raum</h3>
+        <h4>Pflanzen</h4>
+        <div>
+            <p>
+                Es können sich mehrere Pflanzen im Raum befinden.
+            </p>
+            <p>
+                Folge den Reglen, die aufgelistet sind in der Reihenfolge. Der erste
+                Punkt, der zutrifft ist zu befolgen.
+            </p>
+            <ol>
+                <li>
+                    Wenn mindestens eine Pflanze einen blauen Topf hat, halte die 
+                    Taste "B" gedrückt und klicke auf einen Pflanze mit blauen Topf.
+                </li>
+                <li>
+                    Wenn genau eine Pflanze die selbe Farbe hat, wie ihr 
+                    Topf, dann halte die Taste "F" gedrückt und klicke auf diese 
+                    Pflanze.
+                </li>
+                <li>
+                    Wenn beiden Pflanzen die selbe Topffarbe haben und beide 
+                    Pflanzen unterschiedliche Blätterfarben haben, dann halte 
+                    die Taste "U" gedrückt und klicke auf die Pflanze mit 
+                    den orangenen Blättern.
+                </li>
+                <li>
+                    Andernfalls halte die Taste "A" gedrückt und klicke auf eine 
+                    beliebige Pflanze.
+                </li>
+            </ol>
+        </div>
+
+        <h4>Computer</h4>
+        <div>
+            <p>
+                Am Bildschirm können zwischen 3 und 5 Kabeln hängen.
+            </p>
+            <p>
+                Jedes Kabel kann eine oder mehrere farbliche Markierung(en) haben.
+            </p>
+            <p>
+                Starte bei Punkt 1.
+            </p>
+            <ol>
+                <li> <!-- 1 -->
+                    Mindestens ein Kabel hat eine orangene Markierung.<br>
+                    Ja: Gehe zu Punkt <strong>2</strong><br>
+                    Nein: Gehe zu Punkt <strong>3</strong>
+                </li>
+                <li> <!-- 2 -->
+                    Es befinden sich 4 oder 5 Kabel am Bildschirm.<br>
+                    Ja: Gehe zu Punkt <strong>4</strong><br>
+                    Nein: Gehe zu Punkt <strong>5</strong>
+                </li>
+                <li> <!-- 3 -->
+                    Genau zwei Kabel haben zwei Markierungen.<br>
+                    Ja: Gehe zu Punkt <strong>5</strong><br>
+                    Nein: Gehe zu Punkt <strong>6</strong>
+                </li>
+                <li> <!-- 4 -->
+                    Genau ein Kabel hat keine Markierung.<br>
+                    Ja: <strong>6</strong><br>
+                    Nein: <strong>2</strong>
+                </li>
+                <li> <!-- 5 -->
+                    Es gibt mindestens eine orangene Markierungen mehr, als weiße.<br>
+                    Ja: <strong>3</strong><br>
+                    Nein: <strong>4</strong>
+                </li>
+                <li> <!-- 6 -->
+                    Das zweite Kabel von links hat keine Markierung.<br>
+                    Ja: <strong>0</strong><br>
+                    Nein: <strong>1</strong>
+                </li>
+            </ol>
+
+            Der Computer lässt sich mit folgender Kombination starten:<br>
+            1. Ziffer: Die Lösung des Kabelrätsels<br>
+            2. Ziffer: siehe nachfolgende Liste
+        </div>
+    </body>
+</html>

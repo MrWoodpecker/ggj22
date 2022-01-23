@@ -1,0 +1,67 @@
+{
+    "plants": {
+        "smallLeft": [
+            {
+                "path": "assets/items/plant_small_ob.png",
+                "colorPlanter": "orange",
+                "colorPlant": "blue",
+                "size": {
+                    "w": 120,
+                    "h": 280
+                },
+                "coordinates": {
+                    "x": 448,
+                    "y": 0
+                }
+            }
+        ],
+        "bigRight": [
+            {
+                "path": "assets/items/plant_big_ob.png",
+                "colorPlanter": "orange",
+                "colorPlant": "blue",
+                "size": {
+                    "w": 280,
+                    "h": 600
+                },
+                "coordinates": {
+                    "x": 1180,
+                    "y": 0
+                }
+            }
+        ]
+    },
+    "computer": {
+        "path": "assets/items/computer.png",
+        "cabels": [
+            {
+                "marks": []
+            },
+            {
+                "marks": [
+                    "orange",
+                    "white"
+                ]
+            },
+            {
+                "marks": [
+                    "orange"
+                ]
+            },
+            {
+                "marks": [
+                    "white",
+                    "orange"
+                ]
+            }
+        ],
+        "size": {
+            "w": 750,
+            "h": 400
+        },
+        "coordinates": {
+            "x": 0,
+            "y": 540
+        }
+    }
+}

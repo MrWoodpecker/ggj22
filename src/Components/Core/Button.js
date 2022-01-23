@@ -4,13 +4,15 @@
 import Phaser from 'phaser';
 
 
-const activeColor = 'red';
-const inactiveColor = 'black';
+const active_backgroundColor = '#8ecae6';
+const inactive_backgroundColor = 'black';
+const active_textColor = 'black';
+const inactive_textColor = 'white';
 const style = {
-    fill: 'white',
+    fill: inactive_textColor,
     fontFamily: 'GameFont',
     fontSize: '25px',
-    backgroundColor: inactiveColor,
+    backgroundColor: inactive_backgroundColor,
     padding: 8
 };
 
@@ -23,7 +25,7 @@ class Button extends Phaser.GameObjects.Text {
         this.setOrigin(0.5, 0.5);
         this.active = !!active;
         if(this.active) {
-            this.setStyle({ backgroundColor: activeColor });
+            this.setStyle({ backgroundColor: active_backgroundColor, fill: active_textColor });
         }
     }
 
@@ -39,11 +41,11 @@ class Button extends Phaser.GameObjects.Text {
         this.active = !this.active;
 
         if(this.active === true) {
-            this.setStyle({ backgroundColor: activeColor });
+            this.setStyle({ backgroundColor: active_backgroundColor, fill: active_textColor });
         }
 
         if(this.active === false) {
-            this.setStyle({ backgroundColor: inactiveColor });
+            this.setStyle({ backgroundColor: inactive_backgroundColor, fill: inactive_textColor });
         }
     }
 }
