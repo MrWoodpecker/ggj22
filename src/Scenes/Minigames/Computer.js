@@ -127,10 +127,10 @@ class Computer extends Phaser.Scene {
 
         if(this.code.length === 4) {
             if(this.code === '6   ') {
-                this.text_hint.setText('KUH KU OK K OKAY KK HUH UH');
+                this.text_hint.setText('( 9 + 3 * 5 ) : 6 - 2');
             }
             if(this.code !== '6   ') {
-                this.text_hint.setText('Q Q UHU U K FERTIG LINKS WEITER');
+                this.text_hint.setText('( 9 + 3 * 5 ) : 6 - 4');
             }
             this.text_hint.setVisible(true);
         }

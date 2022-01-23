@@ -15,7 +15,7 @@ export default {
     },
 
     // custom stuff
-    splashScreenDelay: 100,
+    splashScreenDelay: 1500,
 
     // state
     plantsStatus: 'NONE', // NONE | FAIL | DONE

@@ -94,7 +94,7 @@ class Room1 extends Phaser.Scene {
         // <<< Computer
         // >>> Timer
         this.timeInSeconds = 300;
-        this.timeText = this.add.text(1470, 160, "0:00", { fontFamily: 'GameFont', fontSize: '50px', color: '#8ecae6' });
+        this.timeText = this.add.text(1470, 160, "05:00", { fontFamily: 'GameFont', fontSize: '50px', color: '#8ecae6' });
         this.timeText.setOrigin(0.5, 0.5);
         this.timer = this.time.addEvent({
             delay: 1000,
